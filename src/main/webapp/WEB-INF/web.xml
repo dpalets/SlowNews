@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    <welcome-file-list>
+        <welcome-file>LoginController</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>SlowNewsServlet</servlet-name>
+        <servlet-class>SlowNewsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SlowNewsServlet</servlet-name>
+        <url-pattern>/SlowNewsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>RegistrationController</servlet-name>
+    <servlet-class>RegistrationController</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistrationController</servlet-name>
+        <url-pattern>/RegistrationController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>LoginController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+
+</web-app>
