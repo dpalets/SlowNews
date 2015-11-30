@@ -28,5 +28,8 @@
 
 </form>
 
+<p></p>
+<p></p><a href = login.jsp>Already registered? Please log in.</a></p>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
@@ -9,7 +10,9 @@ import java.util.ArrayList;
  */
 public class SlowNewsServlet extends HttpServlet {
 
-    ArrayList<User> allUsers = new ArrayList<>();
+   public ArrayList<User> allUsers = new ArrayList<>();
+
+//    AllUsers allUsers = new AllUsers();
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -43,6 +46,11 @@ public class SlowNewsServlet extends HttpServlet {
                 session.setAttribute("currentUser", currentUser);
             }
 
+            ServletContext slowNewsContext = getServletContext();
+            if (slowNewsContext.getAttribute("allUsers") == null) {
+                slowNewsContext.setAttribute("allUsers", allUsers);
+            }
+
             req.setAttribute("currentUser", currentUser);
             req.getRequestDispatcher("welcome.jsp").forward(req, resp);
 
@@ -56,11 +64,13 @@ public class SlowNewsServlet extends HttpServlet {
     public boolean loginFree(String login) {
 
         for (int i = 0; i < allUsers.size(); i++)
-        {  if (!(allUsers.get(i).getLogin().isEmpty()) && allUsers.get(i).getLogin().equals(login)) return false; }
+        {  if (!(allUsers.get(i).getLogin().isEmpty()) && allUsers.get(i).getLogin().equals(login))
+            return false; }
 
         return true;
     }
 
-    }
+
+}
 
 
