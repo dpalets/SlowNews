@@ -1,7 +1,7 @@
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.eclipse.persistence.jaxb.JAXBContextFactory;
+import org.eclipse.persistence.jaxb.JAXBContextFactory; /* MOXy added here*/
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -18,6 +18,7 @@ import java.io.StringReader;
  * Created by Dmytro.Palets on 23.11.2015.
  */
 public class TestMain {
+
 
 //   @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -39,11 +40,23 @@ public class TestMain {
 
         System.out.println(currentWeather.getTemperature());
 
-        JAXBContext context = JAXBContextFactory.createContext(new Class[] {NewsItem.class}, null);
+        /*JAXBContext context = JAXBContextFactory.createContext(new Class[] {NewsItem.class}, null);
         Unmarshaller unmarshaller = context.createUnmarshaller();
-        NewsItem newsItem = (NewsItem) unmarshaller.unmarshal(new StreamSource(new StringReader(responseStringNews)));
+        NewsItem newsItem = (NewsItem) unmarshaller.unmarshal(new StreamSource(new StringReader(responseStringNews)));*/
 
-        System.out.println(newsItem.getNewsTitle());
+        JAXBContext context = JAXBContextFactory.createContext(new Class[] {AllNews.class}, null);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        AllNews newsItems = (AllNews) unmarshaller.unmarshal(new StreamSource(new StringReader(responseStringNews)));
+
+     /*   System.out.println(newsItem.getNewsTitle());
+        System.out.println(newsItem.getNewsBody());
+        System.out.println(newsItem.getNewsLink());
+        System.out.println(newsItem.getPubDate());  */
+
+    //   System.out.println(responseStringNews);
+
+        System.out.println(newsItems.getNewsItems());
 
     }
+
 }
