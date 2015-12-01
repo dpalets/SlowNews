@@ -11,7 +11,7 @@
 
 <body>
 
-<form action="SlowNewsServlet" method = "post"/>
+<form action="../SlowNewsServlet" method = "post"/>
     First name: <br />
     <input type="text" name="firstName">
     <p></p>
@@ -29,7 +29,7 @@
 </form>
 
 <p></p>
-<p></p><a href = login.jsp>Already registered? Please log in.</a></p>
+<p></p><a href =/jsp/login.jsp>Already registered? Please log in.</a></p>
 
 </body>
 </html>

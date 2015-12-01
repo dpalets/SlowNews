@@ -46,12 +46,12 @@ public class LoginController extends HttpServlet {
 
                     session.setAttribute("currentUser", currentUser);
                     req.setAttribute("currentUser", currentUser);
-                    req.getRequestDispatcher("welcome.jsp").forward(req, resp);
+                    req.getRequestDispatcher("jsp/welcome.jsp").forward(req, resp);
                 }
             }
 
             else {
-                req.getRequestDispatcher("loginerror.jsp").forward(req, resp);
+                req.getRequestDispatcher("jsp/loginerror.jsp").forward(req, resp);
             }
 
         }

@@ -10,7 +10,7 @@
 
 <html>
 <body>
-Welcome, ${currentUser.getFirstName()} ${currentUser.getLastName()}!
+<p align = "right">Welcome, ${currentUser.getFirstName()} ${currentUser.getLastName()}!</p>
 
 </body>
 </html>

@@ -23,6 +23,6 @@ public class RegistrationController extends HttpServlet {
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        req.getRequestDispatcher("registration.jsp").forward(req, resp);
+        req.getRequestDispatcher("jsp/registration.jsp").forward(req, resp);
     }
 }

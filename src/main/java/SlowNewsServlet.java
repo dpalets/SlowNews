@@ -52,12 +52,12 @@ public class SlowNewsServlet extends HttpServlet {
             }
 
             req.setAttribute("currentUser", currentUser);
-            req.getRequestDispatcher("welcome.jsp").forward(req, resp);
+            req.getRequestDispatcher("../NewsController").forward(req, resp);
 
         }
 
         else {
-            req.getRequestDispatcher("registrationerror.jsp").forward(req, resp);
+            req.getRequestDispatcher("jsp/registrationerror.jsp").forward(req, resp);
             }
     }
 
