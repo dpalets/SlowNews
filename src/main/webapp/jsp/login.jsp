@@ -9,12 +9,12 @@
 <html>
 <body>
 
-<form action="../LoginController" method = "post"/>
+<form action="/LoginController" method = "post"/>
     Login: <br />
     <input type="text" name="login">
     <p></p>
     Password: <br />
-    <input type="text" name="password">
+    <input type="text" name="password" type="password">
     <p></p>
     <input type="submit" value="Submit" />
 </form>

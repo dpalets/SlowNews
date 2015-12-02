@@ -1,5 +1,6 @@
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,6 +8,8 @@ import java.util.ArrayList;
 /**
  * Created by Dmytro.Palets on 17.11.2015.
  */
+@WebServlet("/")
+
 public class LoginController extends HttpServlet {
 
 

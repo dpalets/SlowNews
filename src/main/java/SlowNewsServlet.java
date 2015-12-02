@@ -52,7 +52,7 @@ public class SlowNewsServlet extends HttpServlet {
             }
 
             req.setAttribute("currentUser", currentUser);
-            req.getRequestDispatcher("../NewsController").forward(req, resp);
+            req.getRequestDispatcher("/NewsController").forward(req, resp);
 
         }
 
