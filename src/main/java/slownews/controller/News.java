@@ -1,3 +1,5 @@
+package slownews.controller;
+
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 
 import javax.servlet.ServletException;
@@ -14,12 +16,17 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.StringReader;
 
+import slownews.model.AllNews;
+import slownews.model.User;
+
 /**
  * Created by Dmytro.Palets on 01.12.2015.
  */
-@WebServlet("/NewsController")
+@WebServlet("/News")
 
-public class NewsController extends HttpServlet {
+public class News extends HttpServlet {
+
+    private static final String NEWSPAGE = "/WEB-INF/view/newspage.jsp";
 
     @Override
     public void doGet (HttpServletRequest req, HttpServletResponse resp)
@@ -54,6 +61,6 @@ public class NewsController extends HttpServlet {
         if (session.getAttribute("currentUser") instanceof User) {
             User currentUser = (User)session.getAttribute("currentUser");
         }
-        req.getRequestDispatcher("jsp/welcome.jsp").forward(req, resp);
+        req.getRequestDispatcher(NEWSPAGE).forward(req, resp);
     }
 }

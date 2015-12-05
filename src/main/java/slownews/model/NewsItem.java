@@ -1,3 +1,5 @@
+package slownews.model;
+
 import org.eclipse.persistence.oxm.annotations.XmlPath;
 
 import javax.xml.bind.annotation.XmlAccessType;

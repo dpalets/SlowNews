@@ -11,7 +11,7 @@
 <span style = "color: red"><b>This login is in use. Please choose another one.</b></span>
 
 <p></p>
-<p></p><a href =/jsp/registration.jsp>Back to the registration page</a></p>
+<p></p><a href =/WEB-INF/view/registration.jsp>Back to the registration page</a></p>
 
 </body>
 </html>

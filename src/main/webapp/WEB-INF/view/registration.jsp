@@ -29,7 +29,7 @@
 </form>
 
 <p></p>
-<p></p><a href =/jsp/login.jsp>Already registered? Please log in.</a></p>
+<p></p><a href =/WEB-INF/view/login.jsp>Already registered? Please log in.</a></p>
 
 </body>
 </html>

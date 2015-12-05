@@ -1,20 +1,27 @@
+package slownews.controller;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
+import slownews.model.User;
 
 /**
  * Created by Dmytro.Palets on 15.11.2015.
  */
+@WebServlet("/SlowNewsServlet")
+
 public class SlowNewsServlet extends HttpServlet {
+
+    private final String registrationError = "/WEB-INF/view/registrationerror.jsp";
 
    public ArrayList<User> allUsers = new ArrayList<>();
 
 //    AllUsers allUsers = new AllUsers();
 
-    @Override
+/*    @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         processRequest(req, resp);
@@ -25,19 +32,18 @@ public class SlowNewsServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         processRequest(req, resp);
-    }
+    }*/
 
-    protected void processRequest(HttpServletRequest req, HttpServletResponse resp)
+    protected void service(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-
-        if (loginFree(req.getParameter("login"))) {
+           if (loginFree(req.getParameter("login"))) {
 
             User currentUser = new User(req.getParameter("firstName"), req.getParameter("lastName"),
                     req.getParameter("login"), req.getParameter("password"));
 
 
-            currentUser.saveUserCredentials();
+
 
             allUsers.add(currentUser);
 
@@ -57,7 +63,7 @@ public class SlowNewsServlet extends HttpServlet {
         }
 
         else {
-            req.getRequestDispatcher("jsp/registrationerror.jsp").forward(req, resp);
+            req.getRequestDispatcher(registrationError).forward(req, resp);
             }
     }
 

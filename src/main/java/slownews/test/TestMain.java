@@ -1,11 +1,11 @@
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.DeserializationFeature;
+package slownews.test;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.eclipse.persistence.jaxb.JAXBContextFactory; /* MOXy added here*/
+import slownews.model.AllNews;
+import slownews.model.WeatherConditions;
 
-import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;

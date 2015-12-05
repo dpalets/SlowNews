@@ -3,39 +3,44 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    
-    <welcome-file-list>
-        <welcome-file>jsp/login.jsp</welcome-file>
-    </welcome-file-list>
 
-    <servlet>
-        <servlet-name>SlowNewsServlet</servlet-name>
-        <servlet-class>SlowNewsServlet</servlet-class>
-    </servlet>
+    <display-name>Slow News</display-name>
+
+ <!--   <welcome-file-list>
+        <welcome-file>/SlowNewsServlet</welcome-file>
+    </welcome-file-list>-->
 
     <servlet-mapping>
-        <servlet-name>SlowNewsServlet</servlet-name>
-        <url-pattern>/SlowNewsServlet</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-    <servlet-name>RegistrationController</servlet-name>
-    <servlet-class>RegistrationController</servlet-class>
-</servlet>
-
+         <servlet-name>default</servlet-name>
+      <url-pattern>*.css</url-pattern>
+          </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RegistrationController</servlet-name>
-        <url-pattern>/RegistrationController</url-pattern>
-    </servlet-mapping>
 
-    <servlet>
-        <servlet-name>LoginController</servlet-name>
-        <servlet-class>LoginController</servlet-class>
-    </servlet>
+        <servlet-name>default</servlet-name>
+             <url-pattern>*.js</url-pattern>
+        </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>LoginController</servlet-name>
-        <url-pattern>/LoginController</url-pattern>
-    </servlet-mapping>
+         <servlet-mapping>
+             <servlet-name>default</servlet-name>
+             <url-pattern>*.png</url-pattern>
+         </servlet-mapping>
+
+         <servlet-mapping>
+             <servlet-name>default</servlet-name>
+             <url-pattern>*.jpg</url-pattern>
+        </servlet-mapping>
+
+         <servlet-mapping>
+             <servlet-name>default</servlet-name>
+             <url-pattern>*.jpeg</url-pattern>
+         </servlet-mapping>
+
+         <servlet-mapping>
+             <servlet-name>default</servlet-name>
+             <url-pattern>*.ico</url-pattern>
+
+         </servlet-mapping>
+
+
 
 </web-app>

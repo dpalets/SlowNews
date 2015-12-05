@@ -9,7 +9,8 @@
 <html>
 <body>
 
-<form action="/LoginController" method = "post"/>
+
+<form action="/Login" method = "post"/>
     Login: <br />
     <input type="text" name="login">
     <p></p>
@@ -20,7 +21,7 @@
 </form>
 
 
-<a href =/jsp/registration.jsp>Not registered?</a>
+<a href =/WEB-INF/view/registration.jsp>Not registered?</a>
 
 </body>
 </html>

@@ -1,3 +1,5 @@
+package slownews.model;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**

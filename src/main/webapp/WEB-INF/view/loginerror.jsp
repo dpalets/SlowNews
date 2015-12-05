@@ -12,10 +12,10 @@
 <span style = "color: red"><b>Incorrect credentials.</b></span>
 
 <p></p>
-<p></p><a href =/jsp/login.jsp>Back to the login page</a></p>
+<p></p><a href =/WEB-INF/view/login.jsp>Back to the login page</a></p>
 
 <p></p>
-<p></p><a href =/jsp/registration.jsp>To the registration page</a></p>
+<p></p><a href =/WEB-INF/view/registration.jsp>To the registration page</a></p>
 
 </body>
 </html>
